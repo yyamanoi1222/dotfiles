@@ -56,14 +56,6 @@ let g:unite_enable_start_insert=0
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
 
-let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_linters = { 'typescript': ['tslint', 'tsserver', 'typecheck']}
-
-let g:tsuquyomi_completion_detail = 1
-let g:tsuquyomi_disable_quickfix = 1
-let g:tsuquyomi_use_dev_node_module = 1
-let g:tsuquyomi_use_local_typescript = 1
-
 let g:acp_enableAtStartup = 0
 
 " Key Mapping
@@ -80,3 +72,24 @@ inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 
 set clipboard=unnamedplus
+
+function! s:on_lsp_buffer_enabled() abort
+  setlocal omnifunc=lsp#complete
+  setlocal signcolumn=yes
+  nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> <f2> <plug>(lsp-rename)
+  inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
+endfunction
+
+augroup lsp_install
+  au!
+  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+command! LspDebug let lsp_log_verbose=1 | let lsp_log_file = expand('~/lsp.log')
+
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 1
+let g:asyncomplete_popup_delay = 200
+let g:lsp_text_edit_enabled = 1

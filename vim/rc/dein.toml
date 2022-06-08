@@ -1,26 +1,14 @@
 [[plugins]]
-repo = 'fatih/vim-go'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'heavenshell/vim-tslint'
-
-[[plugins]]
-repo = 'posva/vim-vue'
-
-[[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-
-[[plugins]]
-repo = 'szw/vim-tags'
 
 [[plugins]]
 repo = 'Shougo/unite.vim'
@@ -35,26 +23,26 @@ repo = 'Shougo/neomru.vim'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'slim-template/vim-slim'
-
-[[plugins]]
-repo = 'w0rp/ale'
-
-[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'quramy/tsuquyomi'
+repo = 'prabirshrestha/asyncomplete.vim'
 
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]]
-repo = 'dart-lang/dart-vim-plugin'
+repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
-repo = 'zxqfl/tabnine-vim'
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
-repo = 'hashivim/vim-terraform'
+repo = 'mattn/vim-lsp-icons'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
