@@ -9,6 +9,12 @@ if [ -x "`which xdg-open`" ]; then
   alias open="xdg-open"
 fi
 
+if [ -x "`which pyenv`" ]; then
+  eval "$(pyenv init -)"
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+fi
+
 
 # Go
 export GOPATH=$HOME/.go
