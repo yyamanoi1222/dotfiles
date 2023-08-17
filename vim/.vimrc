@@ -11,6 +11,7 @@ set softtabstop=2
 colorscheme molokai
 syntax on
 
+au BufNewFile,BufRead *.go set noexpandtab tabstop=4 shiftwidth=4
 
 " Plugin Setup
 let s:dein_dir = expand('~/.cache/dein')
